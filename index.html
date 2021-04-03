@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>truc</title>
     <link rel="stylesheet" href="test.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,29 +15,30 @@
         <div class="liquid"></div>
     </div>
     <main>
-        <div class="up">
-            <svg class="add" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="icon_add">
-                    <g id="back">
-                        <circle id="backcircle" cx="25" cy="25" r="25" />
-                    </g>
-                    <g id="cross">
-                        <rect id="rec2" x="19" y="3" width="12" height="44" rx="3" />
-                        <rect id="rec1" x="3" y="19" width="44" height="12" rx="3" />
-                    </g>
-                </g>
-            </svg>
+        <div class="upper-part">
+            <form>
+                <input id="add_input" autocomplete="off" type="text"></input>
+                <button id="add_button">
+                    <svg id="add_logo" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon_add">
+                            <g id="back">
+                                <circle id="backcircle" cx="25" cy="25" r="25" />
+                            </g>
+                            <g id="cross">
+                                <rect id="rec2" x="19" y="3" width="12" height="44" rx="3" />
+                                <rect id="rec1" x="3" y="19" width="44" height="12" rx="3" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </form>
         </div>
-        <div class="list">
-            <div class="baba">
-                <ul>
-                    <li>aa</li>
-                    <li>aa</li>
-                    <li>aa</li>
-                </ul>
+        <div class="middle-part">
+            <div class="list">
             </div>
             
         </div>
+        <script src="./app.js"></script>
     </main>
 
 </body>
