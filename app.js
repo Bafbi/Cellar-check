@@ -1,11 +1,11 @@
 //  SELECTEURS
-const addButton = document.getElementById("add_button")
-const addInput = document.getElementById("add_input")
-const bottleList = document.querySelector(".list")
+const ADDButton = document.getElementById("add_button")
+const ADDInput = document.getElementById("add_input")
+const BOTTLEList = document.querySelector(".list")
 
 //  ECOUTEURS
-addButton.addEventListener("click", displayInput)
-addBottle.addEventListener("click", addBottle)
+ADDButton.addEventListener("click", displayInput)
+BOTTLEList.addEventListener("click", changeBottle)
 //  FUNCTIONS
 function displayInput(event) {
     event.preventDefault()
@@ -14,7 +14,7 @@ function displayInput(event) {
     bottleDiv.classList.add("bottle")
     //Create li
     const newBottle = document.createElement("li")
-    newBottle.innerText = "yo"
+    newBottle.innerText = ADDInput.value
     newBottle.classList.add("bottle-item")
     bottleDiv.appendChild(newBottle)
     //Add bottle button
@@ -33,9 +33,20 @@ function displayInput(event) {
     removeBottle.classList.add("remove-bottle")
     bottleDiv.appendChild(removeBottle)
     //Add bottleDiv at bottleList 
-    bottleList.appendChild(bottleDiv)   
+    BOTTLEList.appendChild(bottleDiv)
+    ADDInput.value = "" 
 }
 
-function addBottle(event) {
-    alert("a")
+function changeBottle(event) {
+    const item = event.target
+    if (item.classList[0] === "add-bottle") {
+        item.parentElement.childNodes[2].innerText ++
+        
+    } else if (item.classList[0] === "remove-bottle") {
+        if (item.parentElement.childNodes[2].innerText == 1) {
+            item.parentElement.remove()
+        } else {
+            item.parentElement.childNodes[2].innerText --
+        }  
+    }
 }
