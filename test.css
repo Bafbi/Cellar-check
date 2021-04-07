@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --liquid-wine-color: #F7FDA7;
+}
 svg {
   pointer-events: none;
 }
@@ -70,6 +73,8 @@ main {
   flex-direction: column;
 }
 
+/* UPPER PART */
+
 .upper-part {
   position: sticky;
   top: 0;
@@ -89,11 +94,13 @@ form {
   overflow: hidden;
 }
 
+/* BUTTON */
 #add_button {
   background: none;
   border: none;
   height: 60px;
   width: 60px;
+  cursor: pointer;
 }
 #add_button:focus {
   outline: none;
@@ -107,7 +114,7 @@ form {
   fill: #ED4262;
 }
 #add_logo #back {
-  fill: #CC1642;
+  fill: #a31236;
 }
 #add_logo.click {
   transform: rotate(45deg);
@@ -116,17 +123,45 @@ form {
   transform: scale(1.1, 1.1);
 }
 
+/* INPUT */
 #add_input {
   background: linear-gradient(to left, rgba(240,245,155,.5), rgba(255,209,11,.5));
   border: none;
   font-family: 'Courgette', cursive;
   padding: .2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-radius: .7rem;
+  max-width: 60vw;
 }
 #add_input:focus {
   outline: none;
 }
+
+/* SELECT */
+#add_select {
+  border: none;
+  background: none;
+  padding: 0.9rem;
+  padding-left: 0.1rem;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #CC1642;
+}
+#wineglass_logo {
+  position: absolute;
+  transform: translateY(-25px);
+}
+.glass {
+  fill: #C4C4C4;
+}
+.back {
+  fill: #a31236;
+}
+#wineglass_logo #color_wine {
+  fill: var(--liquid-wine-color);
+}
+
+/* MIDLLE PART */
 
 .middle-part {
   display: flex;
@@ -153,11 +188,15 @@ form {
   align-items: center; 
   min-width: 90%;
 }
+.wine-glass {
+  background-color: #a31236;
+  
+}
 .bottle-item {
   list-style: none;
   font-family: 'Courgette', cursive;
   font-size: 1.5rem;
-  margin-left: .2rem;
+  margin: .4rem;
   flex: 1;
 }
 .bottle-number {
@@ -166,7 +205,7 @@ form {
   font-size: 1.5rem;
   margin: 1.2rem;
 }
-.add-bottle, .remove-bottle {
+.add-bottle, .remove-bottle, .wine-glass {
   border: none;
   padding: .1rem;
   border-radius: .5rem;
