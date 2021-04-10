@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root{
-  --liquid-wine-color: #F7FDA7;
+  --liquid-wine-color: ;
 }
 svg {
   pointer-events: none;
@@ -85,6 +85,7 @@ main {
   justify-content: center;
   z-index: 2;
   backdrop-filter: blur(1.5rem);
+  margin-bottom: 1vh;
 }
 
 form {
@@ -176,7 +177,7 @@ form {
   display: flex;
   background: rgba(189,227,147, .4);
   border-radius: 1rem;
-  width: 80%;
+  width: 90vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -186,7 +187,7 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; 
-  min-width: 90%;
+  min-width: 92%;
 }
 .wine-glass {
   background-color: #a31236;
