@@ -190,8 +190,8 @@ form {
   min-width: 92%;
 }
 .wine-glass {
-  background-color: #a31236;
-  
+  background-color: rgba(109, 131, 84, 0.7);
+  box-shadow: 2px 2px 5px rgba(65, 77, 52, 0.7);
 }
 .bottle-item {
   list-style: none;
@@ -210,11 +210,12 @@ form {
   border: none;
   padding: .1rem;
   border-radius: .5rem;
+  box-shadow: 2px 2px 5px rgba(65, 77, 52, 0.7);
 }
 .add-bottle {
-  background: linear-gradient(to left, rgba(181,115,70,.8), rgba(217,238,73,.8));
+  background: linear-gradient(to left, rgba(181,115,70,.7), rgba(217,238,73,.7));
 }
 .remove-bottle {
-  background: linear-gradient(to right, rgba(177,18,61,.8), rgba(181,115,70,.8));
+  background: linear-gradient(to right, rgba(177,18,61,.7), rgba(181,115,70,.7));
   transform: rotate(180deg);
 }
